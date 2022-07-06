@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { MeComponent } from './about/me/me.component';
+import { ApiDataComponent } from './api-data/api-data.component';
 import { AppComponent } from './app.component';
+import { GuardService } from './guard.service';
 
 const routes: Routes = [
   {
@@ -14,11 +16,14 @@ const routes: Routes = [
       },
       {
         path:'me/:id',
-        component:MeComponent
-      }
+        component:MeComponent,canActivate:[GuardService]
+      },    
     ]
   },
-
+  {
+    path:'data',
+    component:ApiDataComponent
+  }
  
 ];
 
