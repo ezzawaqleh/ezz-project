@@ -15,12 +15,13 @@ export class AppComponent {
   products:Product[]=[];
   posts:Post[]=[];
   productService=new ProductService();
+
   constructor(){
      this.products=this.productService.getAllProducts();
      this.posts=this.productService.getAllPosts();
   }
 
- }
+}
 
 
 
