@@ -10,7 +10,7 @@ import { Post } from './models/Post';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Ezz';
+  title = 'Ezz Project';
 
   products:Product[]=[];
   posts:Post[]=[];
