@@ -14,7 +14,7 @@ export class MeComponent implements OnInit {
   productService:ProductService=new ProductService();;
   constructor(private route:ActivatedRoute) { 
      
-  }
+  } 
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params:ParamMap)=>{
